@@ -1,5 +1,60 @@
+/* GENERAL */
+
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+/* GENERAL */
+
+#left-bar {
+    width: 70px;
+    height: 100vh;
+    background-color: red;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#left-bar .top-of-bar {
+
+}
+
+#top-bar {
+    width: calc(100vw - 70px);
+    height: 70px;
+    background-color: blue;
+    opacity: 0.5;
+    position: fixed;
+    left: 70px;
+    top: 0;
+}
+
+#main-content {
+    width: calc(100vw - 70px);
+    background-color: yellow;
+    opacity: 0.5;
+    margin: 70px 0 0 70px;
+    overflow-y: hidden;
+}
+/*
+#play-bar {
+    width: 100vw;
+    height: 70px;
+    background-color: black;
+    opacity: 0.5
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    overflow-y: hidden;
+}
+*/
