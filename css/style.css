@@ -23,6 +23,10 @@ body {
     text-transform: uppercase;
 }
 
+.font-bold {
+    font-weight: bold;
+}
+
 .font-color-black {
     color: black;
 }
@@ -64,23 +68,14 @@ body {
 #flex-body {
     display: flex;
 }
+/* COMINCIA LEFT-BAR */
 
 #left-bar {
-    width: 140px;
-    height: 100vh;
+    width: 200px;
+    height: 90vh;
     background-color: #040404;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-
-}
-
-#left-bar .top-of-bar .ms--branding {
-
-}
-
-#left-bar .top-of-bar p {
+    padding: 10px 20px;
 
 
 }
@@ -90,6 +85,7 @@ body {
 #left-bar .top-of-bar ul {
     list-style: none;
     padding: 0;
+
 }
 
 #left-bar .top-of-bar ul li {
@@ -111,12 +107,20 @@ body {
     padding-left: 5px;
 }
 
-#left-bar .bottom-of-bar {
-    align-items: center;
+#left-bar .bottom-of-bar .ms--installa-app {
+    border-bottom: 1px solid #b3b3b3;
+    margin-bottom: 10px;
+
 }
 
+#left-bar .bottom-of-bar span {
+    padding-left: 10px;
+}
+
+/* FINE LEFT-BAR */
+
 #top-bar {
-    width: calc(100vw - 140px);
+    width: calc(100vw - 200px);
     height: 70px;
     background-color: #0b0b0b;
     display: flex;
@@ -130,15 +134,14 @@ body {
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 20px;
-
-
 }
 
 #main-content {
-    width: calc(100vw - 140px);
+    width: calc(100vw - 200px);
+    height: calc(90vh - 70px);
     background-color: #121212;
+    opacity: 0.3;
     overflow-y: auto;
-
 }
 
 #navbar {
@@ -152,23 +155,20 @@ body {
 
 #navbar a {
     text-decoration: none;
-    text-transform: uppercase;
+
 }
 
 #navbar .link-box {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    padding-right: 10px;
 
 }
-/*
+
 #play-bar {
     width: 100vw;
-    height: 70px;
+    height: calc(100vh - 90vh);
     background-color: black;
-    opacity: 0.5
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    overflow-y: hidden;
+    opacity: 0.5;
+    align-self: flex-end;
+
 }
-*/
