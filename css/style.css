@@ -119,6 +119,8 @@ body {
 
 /* FINE LEFT-BAR */
 
+/* COMINCIA RIGHT */
+
 #top-bar {
     width: calc(100vw - 200px);
     height: 70px;
@@ -164,11 +166,55 @@ body {
 
 }
 
+/* FINE RIGHT */
+
+/* COMINCIA PLAY-BAR */
+
 #play-bar {
     width: 100vw;
     height: calc(100vh - 90vh);
     background-color: black;
     opacity: 0.5;
     align-self: flex-end;
+    padding: 10px;
 
 }
+
+#play-bar-content {
+    display: flex;
+
+}
+
+#left-play-bar {
+    flex: 0 0 20%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+#left-play-bar img {
+    height: 50px;
+
+}
+
+#song-content {
+    display: flex;
+    flex: 0 0 60%;
+    justify-content: space-between;
+}
+
+#song-text {
+
+}
+
+#song-icons {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 20%;
+}
+
+
+
+
+
+/* FINE PLAY-BAR */
