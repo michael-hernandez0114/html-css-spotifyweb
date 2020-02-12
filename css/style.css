@@ -43,6 +43,10 @@ body {
     font-size: 35px;
 }
 
+.font-size-25 {
+    font-size: 25px;
+}
+
 .font-size-20 {
     font-size: 20px;
 }
@@ -59,8 +63,24 @@ body {
     font-size: 10px;
 }
 
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
 .padding-bottom-10 i {
     padding-bottom: 10px;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.padding-right-20 {
+    padding-right: 20px;
+}
+
+.padding-left-20 {
+    padding-left: 20px;
 }
 
 /* GENERAL */
@@ -76,8 +96,6 @@ body {
     background-color: #040404;
     justify-content: space-between;
     padding: 10px 20px;
-
-
 }
 
 /* NEW CODE FOR LIST */
@@ -124,7 +142,7 @@ body {
 #top-bar {
     width: calc(100vw - 200px);
     height: 70px;
-    background-color: #0b0b0b;
+    background-color: #0c0c0c;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -142,7 +160,6 @@ body {
     width: calc(100vw - 200px);
     height: calc(90vh - 70px);
     background-color: #121212;
-    opacity: 0.3;
     overflow-y: auto;
 }
 
@@ -166,6 +183,26 @@ body {
 
 }
 
+/* COMINCIA RECENTLY-PLAYED */
+
+.rp-tiles {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#recently-played .tile img {
+    height: 250px;
+}
+
+/* FINE RECENTLY-PLAYED */
+
 /* FINE RIGHT */
 
 /* COMINCIA PLAY-BAR */
@@ -173,8 +210,7 @@ body {
 #play-bar {
     width: 100vw;
     height: calc(100vh - 90vh);
-    background-color: black;
-    opacity: 0.5;
+    background-color: #282828;
     align-self: flex-end;
     padding: 10px;
 
@@ -201,10 +237,7 @@ body {
     display: flex;
     flex: 0 0 60%;
     justify-content: space-between;
-}
-
-#song-text {
-
+    align-items: center;
 }
 
 #song-icons {
@@ -243,20 +276,22 @@ body {
 
 .timer-bar {
     width: 50%;
-
     height: 5px;
     border-radius: 5px;
-    background-color: #b3b3b3
-
+    background-color: #404040;
 }
-
 
 #right-play-bar {
     display: flex;
     flex: 0 0 20%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-
-
+.volume-bar {
+    width: 50%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #404040;
+}
 /* FINE PLAY-BAR */
