@@ -19,6 +19,10 @@ body {
     background-color: black;
 }
 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .font-color-black {
     color: black;
 }
@@ -39,6 +43,14 @@ body {
     font-size: 20px;
 }
 
+.font-size-13 {
+    font-size: 13px;
+}
+
+.font-size-11 {
+    font-size: 11px;
+}
+
 .font-size-10 {
     font-size: 10px;
 }
@@ -49,21 +61,54 @@ body {
 
 /* GENERAL */
 
-#left-bar {
-    width: 70px;
-    height: 100vh;
-    background-color: #040404;
-    position: fixed;
-    top: 0;
-    left: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+#flex-body {
+    display: flex;
 }
 
-#left-bar .top-of-bar {
-    align-items: center;
+#left-bar {
+    width: 140px;
+    height: 100vh;
+    background-color: #040404;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+}
+
+#left-bar .top-of-bar .ms--branding {
+
+}
+
+#left-bar .top-of-bar p {
+
+
+}
+
+/* NEW CODE FOR LIST */
+
+#left-bar .top-of-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#left-bar .top-of-bar ul li {
+    padding-top: 5px;
+}
+
+#left-bar .top-of-bar ul li a {
+    text-decoration: none;
+}
+
+.ms--playlist {
+    padding-top: 10px;
+}
+
+/* NEW CODE FOR LIST */
+
+#left-bar .top-of-bar ul li a span {
+    vertical-align: middle;
+    padding-left: 5px;
 }
 
 #left-bar .bottom-of-bar {
@@ -71,17 +116,12 @@ body {
 }
 
 #top-bar {
-    width: calc(100vw - 70px);
+    width: calc(100vw - 140px);
     height: 70px;
     background-color: #0b0b0b;
-    position: fixed;
-    left: 70px;
-    top: 0;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: calc(100vw - 97vw);
 
 }
 
@@ -95,9 +135,29 @@ body {
 }
 
 #main-content {
-    width: calc(100vw - 70px);
+    width: calc(100vw - 140px);
     background-color: #121212;
-    margin: 70px 0 0 70px;
+    overflow-y: auto;
+
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#navbar .link-box {
+    margin-left: 20px;
+    margin-right: 20px;
 
 }
 /*
