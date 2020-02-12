@@ -91,6 +91,10 @@ body {
     padding-bottom: 20px;
 }
 
+.shape-round {
+    border-radius: 50%;
+}
+
 /* GENERAL */
 
 #flex-body {
