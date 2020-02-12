@@ -213,6 +213,48 @@ body {
     flex: 0 0 20%;
 }
 
+#middle-play-bar {
+    display: flex;
+    flex: 0 0 60%;
+    flex-wrap: wrap;
+}
+
+#play-icons {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 30%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.song-timer {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-remaining {
+    flex: 0 0 10%;
+    justify-content: center;
+    display: flex;
+}
+
+
+.timer-bar {
+    width: 50%;
+
+    height: 5px;
+    border-radius: 5px;
+    background-color: #b3b3b3
+
+}
+
+
+#right-play-bar {
+    display: flex;
+    flex: 0 0 20%;
+}
 
 
 
