@@ -180,6 +180,12 @@ i:hover {
     border-radius: 20px;
 }
 
+#top-bar button:hover {
+    background-color: lightgreen;
+    color: black;
+    border-color: 0;
+}
+
 #main-content {
     width: calc(100vw - 200px);
     height: calc(90vh - 70px);
