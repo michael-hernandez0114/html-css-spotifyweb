@@ -443,8 +443,8 @@ body {
 
     #play-icons {
         display: flex;
-        justify-content: center;
-        flex: 0 0 80%;
+        justify-content: space-evenly;
+        flex: 0 0 70%;
         margin: 0 auto;
 
     }
@@ -479,25 +479,16 @@ body {
 /* MEDIA QUERY SM */
 
 /* MEDIA QUERY XS */
-@media all and (max-width: 767px) {
-    .tile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 0 0 50%;
-        flex-wrap: wrap;
-        padding-bottom: 20px;
-    }
 
-    .tile img {
-        width: 270px;
-        height: 270px;
 
-    }
-
+@media screen and (max-width: 767px) {
     #navbar {
         display: flex;
         flex: 0 0 auto;
+    }
+
+    body {
+        background-color: yellow;
     }
 
     #navbar #inner-navbar {
@@ -510,77 +501,15 @@ body {
     }
     #navbar .link-box {
         padding: 20px;
-        flex: 0 0 33%;
+        flex: 0 0 25%;
         display: flex;
         justify-content: center;
 
     }
 
-    #left-play-bar {
-        flex: 0 0 20%;
+    #left-bar span {
+        display: none;
     }
-    #left-play-bar img {
-        height: 30px;
-    }
-
-    #song-content {
-        display: flex;
-        flex: 0 0 70%;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #song-content h5 {
-        font-size: 10px;
-    }
-    #song-content p {
-        font-size: 9px;
-    }
-
-    #song-icons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 0 0 30%;
-    }
-    #middle-play-bar {
-        flex: 0 0 50%;
-    }
-
-
-    #play-icons {
-        display: flex;
-        justify-content: center;
-        flex: 0 0 80%;
-        margin: 0 auto;
-
-    }
-
-    .song-timer {
-        flex: 0 0 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .time-remaining {
-        flex: 0 0 10%;
-        justify-content: center;
-        display: flex;
-    }
-
-
-    .timer-bar {
-        width: 50%;
-        height: 5px;
-        border-radius: 5px;
-        background-color: #404040;
-    }
-
-    #right-play-bar {
-        flex: 0 0 30%;
-    }
-
 }
 
 /* MEDIA QUERY XS */
