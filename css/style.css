@@ -99,6 +99,10 @@ body {
     border-radius: 50%;
 }
 
+i:hover {
+    cursor: pointer;
+}
+
 /* GENERAL */
 
 #flex-body {
@@ -137,6 +141,12 @@ body {
 
 #left-bar .top-of-bar #action-list li:nth-child(1n+2):hover {
     border-left: 3px solid lightgreen;
+
+}
+
+#left-bar .top-of-bar #action-list a:nth-child(1n+1):hover {
+    color: white;
+
 }
 
 #left-bar .bottom-of-bar .ms--installa-app {
@@ -233,6 +243,30 @@ body {
 
 }
 
+.img-container {
+    position: relative;
+}
+
+.tile .img-container:hover img {
+    opacity: 0.3;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+.tile .img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-icon {
+
+}
+
 /* FINE RECENTLY-PLAYED */
 
 /* FINE RIGHT */
@@ -278,6 +312,10 @@ body {
     flex: 0 0 20%;
 }
 
+#song-icons .fa-heart:hover {
+    color: red;
+}
+
 #middle-play-bar {
     display: flex;
     flex: 0 0 60%;
@@ -311,7 +349,14 @@ body {
     height: 5px;
     border-radius: 5px;
     background-color: #404040;
+    transition: width 2s;
 }
+/*
+.fa-play-circle:active .timer-bar span {
+    width: 100%;
+    background-color: white;
+}
+*/
 
 #right-play-bar {
     display: flex;
@@ -482,13 +527,92 @@ body {
 
 
 @media screen and (max-width: 767px) {
+
+    #left-bar {
+        width: 50px;
+        height: 90vh;
+        background-color: #040404;
+        justify-content: space-between;
+        padding: 10px 0px;
+    }
+
+    #left-bar #action-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left-bar span {
+        display: none;
+    }
+
+    #left-bar .top-of-bar ul li {
+        padding-left: 0;
+        border: none;
+    }
+
+    #left-bar .top-of-bar #action-list li .fa-spotify {
+        font-size: 25px;
+    }
+
+    #left-bar .top-of-bar #action-list li .fa-spotify:hover {
+        color: lightgreen;
+    }
+
+    #left-bar .top-of-bar #action-list li:nth-child(1n+2) a i {
+        font-size: 15px;
+    }
+
+    #left-bar .top-of-bar #action-list li:nth-child(1n+2) a:hover {
+        color: white;
+        border: none;
+    }
+
+    #left-bar .top-of-bar #action-list li:nth-child(1n+2):hover {
+        border-left: none;
+    }
+
+    #left-bar .bottom-of-bar {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    #left-bar .bottom-of-bar .ms--installa-app {
+        border-bottom: none;
+        margin-bottom: 0;
+
+    }
+
+    #left-bar .bottom-of-bar i:hover {
+        color: white;
+    }
+
+    #top-bar {
+        width: calc(100vw - 50px);
+        height: 70px;
+        background-color: #0c0c0c;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    #main-content {
+        width: calc(100vw - 50px);
+        height: calc(90vh - 70px);
+        background-color: #121212;
+        overflow-y: auto;
+    }
+
     #navbar {
         display: flex;
         flex: 0 0 auto;
     }
 
-    body {
-        background-color: yellow;
+    #playlist {
+        display: none;
     }
 
     #navbar #inner-navbar {
@@ -507,9 +631,88 @@ body {
 
     }
 
-    #left-bar span {
-        display: none;
+    .tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 50%;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
     }
+
+    .tile img {
+        width: 300px;
+        height: 300px;
+
+    }
+
+
+    #left-play-bar {
+        flex: 0 0 20%;
+    }
+    #left-play-bar img {
+        height: 30px;
+    }
+
+    #song-content {
+        display: flex;
+        flex: 0 0 70%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #song-content h5 {
+        font-size: 10px;
+    }
+    #song-content p {
+        font-size: 9px;
+    }
+
+    #song-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 30%;
+    }
+    #middle-play-bar {
+        flex: 0 0 50%;
+    }
+
+
+    #play-icons {
+        display: flex;
+        justify-content: space-evenly;
+        flex: 0 0 70%;
+        margin: 0 auto;
+
+    }
+
+    .song-timer {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .time-remaining {
+        flex: 0 0 10%;
+        justify-content: center;
+        display: flex;
+    }
+
+
+    .timer-bar {
+        width: 50%;
+        height: 5px;
+        border-radius: 5px;
+        background-color: #404040;
+    }
+
+    #right-play-bar {
+            flex: 0 0 30%;
+    }
+
+
 }
 
 /* MEDIA QUERY XS */
