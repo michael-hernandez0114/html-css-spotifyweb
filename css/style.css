@@ -71,6 +71,10 @@ body {
     padding-top: 5px;
 }
 
+.padding-top-10 {
+    padding-top: 10px;
+}
+
 .padding-bottom-10 i {
     padding-bottom: 10px;
 }
@@ -107,34 +111,31 @@ body {
     height: 90vh;
     background-color: #040404;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
-
-/* NEW CODE FOR LIST */
 
 #left-bar .top-of-bar ul {
     list-style: none;
     padding: 0;
-
 }
 
 #left-bar .top-of-bar ul li {
     padding-top: 5px;
+    padding-left: 20px;
+    border-left: 3px solid transparent;
 }
 
 #left-bar .top-of-bar ul li a {
     text-decoration: none;
 }
 
-.ms--playlist {
-    padding-top: 10px;
-}
-
-/* NEW CODE FOR LIST */
-
 #left-bar .top-of-bar ul li a span {
     vertical-align: middle;
     padding-left: 5px;
+}
+
+#left-bar .top-of-bar #action-list li:nth-child(1n+2):hover {
+    border-left: 3px solid lightgreen;
 }
 
 #left-bar .bottom-of-bar .ms--installa-app {
@@ -173,25 +174,39 @@ body {
     height: calc(90vh - 70px);
     background-color: #121212;
     overflow-y: auto;
+
 }
 
 #navbar {
     display: flex;
-    justify-content: center;
     padding: 20px;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+#navbar #inner-navbar {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    flex-grow: 0;
-    flex-shrink: 0;
 }
 
 #navbar a {
     text-decoration: none;
+}
+
+#navbar #inner-navbar .link-box {
+
 
 }
 
-#navbar .link-box {
-    margin-left: 10px;
-    padding-right: 10px;
+#navbar a {
+    border-bottom: 3px solid transparent;
+}
+
+#navbar a:hover {
+    border-bottom: 3px solid lightgreen;
 
 }
 
@@ -202,7 +217,6 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     flex-wrap: wrap;
-
 }
 
 .tile {
@@ -210,12 +224,11 @@ body {
     flex-direction: column;
     align-items: center;
     flex: 0 0 16.6666667%;
-
 }
 
 .tile img {
-    height: 150px;
-    width: 150px;
+    max-height: 150px;
+    max-width: 150px;
     object-fit: fit;
 }
 
@@ -254,13 +267,13 @@ body {
 #song-content {
     display: flex;
     flex: 0 0 60%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 #song-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex: 0 0 20%;
 }
 
@@ -313,3 +326,36 @@ body {
     background-color: #404040;
 }
 /* FINE PLAY-BAR */
+
+/* MEDIA QUERY MD */
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 25%;
+    }
+
+    #navbar {
+        display: flex;
+        flex: 0 0 auto;
+    }
+
+    #navbar #inner-navbar {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    #navbar .link-box {
+        padding: 20px;
+        flex: 0 0 20%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+}
